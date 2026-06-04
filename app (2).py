@@ -194,7 +194,7 @@ with left_col:
             st.markdown(prompt)
         st.session_state.messages.append({"role": "user", "content": prompt})
         
-        GEMINI_API_KEY = "AIzaSyBwoZXnJHz2u5FFSdOkFDIQ2EPOwTclwU8"
+        GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
         knowledge_base = df_products.to_string(index=False) if not df_products.empty else "Không có dữ liệu."
         
         # Kiểm tra xem câu nói của khách có phải là đồng ý chốt đơn/bỏ giỏ hay không
