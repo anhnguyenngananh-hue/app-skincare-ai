@@ -230,7 +230,7 @@ with left_col:
                         
                         # Chỉ gửi câu prompt hiện tại để giữ dung lượng siêu nhẹ, tránh lỗi 429 hoàn toàn
                         response = client.models.generate_content(
-                            model='gemini-1.5-flash',
+                            model='gemini-2.5-flash',
                             contents=prompt,
                             config=types.GenerateContentConfig(system_instruction=prompt_he_thong, temperature=0.4)
                         )
